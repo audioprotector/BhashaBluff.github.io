@@ -77,9 +77,9 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
 <br>
 <br>
 
-<a name="3" href="https://anonym-demo.github.io/"><h2>Multi-speaker TTS (in Mandarin Chinese)</h2></a>
+<a name="3" href="https://bhashabluff.github.io/"><h2>English Language Audio Samples</h2></a>
 
-<p> 1. Text: 感情这个东西很痛苦，我现在不太喜欢谈恋爱。</p>
+<p> 1. Clean</p>
 <table>
   <thead>
     <tr>
@@ -107,7 +107,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
   </tbody>
 </table>  
 
-<p> 2. Text: 哥们儿别慌，我们等得起。</p>
+<p> 2. Noisy@0dB</p>
 <table>
   <thead>
     <tr>
@@ -135,7 +135,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
   </tbody>
 </table>         
 
-<p> 3. Text: 一个个儿傻乎乎的，多纯情多浪漫，真是比白痴还白痴。</p>
+<p> 3. Noisy@5dB</p>
 <table>
   <thead>
     <tr>
@@ -163,7 +163,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
   </tbody>
 </table> 
 
-<p> 4. Text: 你先休息，我去单位晃晃，顺便通知下其他哥们儿。</p>
+<p> 4. Noisy@10dB</p>
 <table>
   <thead>
     <tr>
@@ -191,7 +191,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
   </tbody>
 </table> 
 
-<p> 5. Text: 你们那儿天真冷，我们这儿还穿单衣呢。</p>
+<p> 5. Noisy@15dB</p>
 <table>
   <thead>
     <tr>
@@ -219,7 +219,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
   </tbody>
 </table> 
 
-<p> 6. Text: 你是学习摄影的，可以把你家的小狗当模特。</p>
+<p> 6. Noise@20dB</p>
 <table>
   <thead>
     <tr>
@@ -247,7 +247,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
   </tbody>
 </table> 
 
-<p> 7. Text: 检察官也建议宜尽快带当事人进行治疗。</p>
+<p> 7. Codec</p>
 <table>
   <thead>
     <tr>
@@ -275,7 +275,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
   </tbody>
 </table>
 
-  <p> 8. Text: 别人和我讲话，我一开口对方既惊喜又惊讶。</p>
+<!--   <p> 8. Text: 别人和我讲话，我一开口对方既惊喜又惊讶。</p>
 <table>
   <thead>
     <tr>
@@ -301,9 +301,9 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
       <td style="text-align: left"><audio src="wavs/diffgan2stage/7.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
-</table> 
+</table>  -->
 
-<p> 9. Text: 灶房里两袋土豆是全家一冬的蔬菜。</p>
+<!-- <p> 9. Text: 灶房里两袋土豆是全家一冬的蔬菜。</p>
 <table>
   <thead>
     <tr>
@@ -329,9 +329,9 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
       <td style="text-align: left"><audio src="wavs/diffgan2stage/8.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
-</table> 
+</table>  -->
 
-<p> 10. Text: 他选中指挥这一远征队的人是太监郑和。</p>
+<!-- <p> 10. Text: 他选中指挥这一远征队的人是太监郑和。</p>
 <table>
   <thead>
     <tr>
@@ -357,11 +357,208 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
       <td style="text-align: left"><audio src="wavs/diffgan2stage/9.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
-</table> 
+</table>  -->
 
 <br>
 <br>
-<a name="4" href="https://anonym-demo.github.io/"><h2>Speaker variations in DiffGAN-TTS (T=4)</h2></a>
+<a name="4" href="https://bhashabluff.github.io/"><h2>Hindi Language Audio Samples</h2></a>
+
+<p> 1. Clean</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Ground Truth<strong></strong></th>
+      <th style="text-align: center"><strong>FastSpeech 2</strong></th>
+      <th style="text-align: center"><strong>GANSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=1)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=2)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=4)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(Two-stage)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="wavs/gt/0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/fastspeech2/0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/ganspeech/0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffspeech/0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT1/0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT2/0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT4/0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffgan2stage/0.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>  
+
+<p> 2. Noisy@0dB</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Ground Truth<strong></strong></th>
+      <th style="text-align: center"><strong>FastSpeech 2</strong></th>
+      <th style="text-align: center"><strong>GANSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=1)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=2)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=4)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(Two-stage)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="wavs/gt/1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/fastspeech2/1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/ganspeech/1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffspeech/1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT1/1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT2/1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT4/1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffgan2stage/1.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>         
+
+<p> 3. Noisy@5dB</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Ground Truth<strong></strong></th>
+      <th style="text-align: center"><strong>FastSpeech 2</strong></th>
+      <th style="text-align: center"><strong>GANSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=1)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=2)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=4)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(Two-stage)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="wavs/gt/2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/fastspeech2/2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/ganspeech/2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffspeech/2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT1/2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT2/2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT4/2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffgan2stage/2.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table> 
+
+<p> 4. Noisy@10dB</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Ground Truth<strong></strong></th>
+      <th style="text-align: center"><strong>FastSpeech 2</strong></th>
+      <th style="text-align: center"><strong>GANSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=1)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=2)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=4)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(Two-stage)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="wavs/gt/3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/fastspeech2/3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/ganspeech/3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffspeech/3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT1/3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT2/3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT4/3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffgan2stage/3.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table> 
+
+<p> 5. Noisy@15dB</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Ground Truth<strong></strong></th>
+      <th style="text-align: center"><strong>FastSpeech 2</strong></th>
+      <th style="text-align: center"><strong>GANSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=1)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=2)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=4)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(Two-stage)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="wavs/gt/4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/fastspeech2/4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/ganspeech/4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffspeech/4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT1/4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT2/4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT4/4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffgan2stage/4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table> 
+
+<p> 6. Noise@20dB</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Ground Truth<strong></strong></th>
+      <th style="text-align: center"><strong>FastSpeech 2</strong></th>
+      <th style="text-align: center"><strong>GANSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=1)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=2)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=4)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(Two-stage)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="wavs/gt/5.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/fastspeech2/5.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/ganspeech/5.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffspeech/5.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT1/5.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT2/5.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT4/5.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffgan2stage/5.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table> 
+
+<p> 7. Codec</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Ground Truth<strong></strong></th>
+      <th style="text-align: center"><strong>FastSpeech 2</strong></th>
+      <th style="text-align: center"><strong>GANSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffSpeech</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=1)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=2)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(T=4)</strong></th>
+      <th style="text-align: center"><strong>DiffGAN-TTS(Two-stage)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="wavs/gt/6.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/fastspeech2/6.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/ganspeech/6.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffspeech/6.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT1/6.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT2/6.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffganT4/6.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs/diffgan2stage/6.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
+<!-- <a name="4" href="https://anonym-demo.github.io/"><h2>Hindi Language Audio Samples </h2></a>
 
 <p> 1. Text: 你是学习摄影的，可以把你家的小狗当模特。</p>
 <table>
@@ -425,7 +622,7 @@ and multiple scenarios. We also provide benchmark results under multiple evaluat
       <td style="text-align: left"><audio src="wavs/10speakers/09.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
-</table> 
+</table>  -->
 
 <br>
 <br>
