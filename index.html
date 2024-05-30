@@ -4,9 +4,9 @@
     
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>DiffGAN-TTS: High-Fidelity and Efficient Text-to-Speech with Denoising Diffusion GANs</title>
+<title>BhashaBluff: An Audio Deepfake Dataset</title>
 <meta name="generator" content="Jekyll v3.9.0">
-<meta property="og:title" content="DiffGAN-TTS: High-Fidelity and Efficient Text-to-Speech with Denoising Diffusion GANs">
+<meta property="og:title" content="BhashaBluff: An Audio Deepfake Dataset">
 <meta property="og:locale" content="en_US">
 <link rel="canonical" href="https://anonym-demo.github.io/diffgan">
 <meta property="og:url" content="https://anonym-demo.github.io/diffgan/">
@@ -26,7 +26,7 @@
     </section>
 
     <section class="main-content">
-      <h1 id=""><center> DiffGAN-TTS: High-Fidelity and Efficient Text-to-Speech with Denoising Diffusion GANs </center></h1>
+      <h1 id=""><center> BhashaBluff: An Audio Deepfake Dataset </center></h1>
 
 <center> Anonymous Authors </center>
 <!-- <center> <sup>2</sup> Tencent AI Lab </center> -->
@@ -34,11 +34,10 @@
 
 <h2 id="abstract">Abstract</h2>
 <p>
-Denoising diffusion probabilistic models (DDPMs) are expressive generative models and have been successfully applied in various speech synthesis tasks. However, their expensive sampling makes it hard to apply DDPMs in real-time speech processing applications.
-In this paper, we introduce DiffGAN-TTS, a novel DDPM-based text-to-speech (TTS) model able to achieve high-fidelity and efficient speech synthesis. 
-DiffGAN-TTS is built on denoising diffusion generative adversarial networks (GANs), which adopt an expressive model to approximate the denoising distribution. Large denoising steps are allowed in DiffGAN-TTS to make generation process efficient.
-We show with multi-speaker TTS experiments that DiffGAN-TTS is able to generate high-fidelity speech samples within only 4 denoising steps.
-To further accelerate inference, we present an active shallow diffusion mechanism. A two-stage training scheme is designed, where a basic TTS acoustic model trained at stage one provides strong prior information for a DDPM trained at stage two. Our experiments show that DiffGAN-TTS can achieve high synthesis performance with only 1 denoising step.
+Audio deepfake detection has become a critical area of research within the scientific community. While existing efforts primarily focus on detecting deepfake audios in clean recordings, with a single language and limited codec variation, the landscape is evolving. The widespread use of social media has introduced new challenges, including deepfake audios in multiple languages, noisy conditions, various transcoding methods, and neural compressions. In this study, we address these real-world complexities by introducing the BhashaBluff dataset, which contains (i) deepfake audios in clean environments in Hindi and English with code mixed in Hindi and English. (ii) deepfake audios in noisy surroundings created using 4 environmental sound datasets. (iii) a transcodec and neural compressed audio deepfake dataset to mimic the sharing of audio files on social media. 
+% The dataset is created in 109 days, continuously using 7 GPUs amounting to 1,800 GB cumulative memory. 
+With over 500 GBs, the dataset contains 3.4 million audio files, encompassing three partitions. To the best of our knowledge, this is the largest dataset, containing vast variability
+and multiple scenarios. We also provide benchmark results under multiple evaluation settings using popular and state-of-the-art deepfake detection models. The results demonstrate a significant performance reduction in the deepfake detection task on noisy and compressed deepfakes. Furthermore, existing techniques show lower performance on unseen languages and attacks.  It is our assertion that this database will improve state of the art by extending the capabilities of deepfake detection algorithms to real-world scenarios. 
 </p>
 
 
