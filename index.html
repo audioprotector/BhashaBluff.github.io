@@ -92,6 +92,46 @@
       color: #009879;
       text-align: center;
     }
+            .table3 {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .table3 caption {
+      margin: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .table3 thead tr {
+      background-color: #8B0000;
+      color: #ffffff;
+      text-align: left;
+    }
+    .table3 th, .table3 td {
+      padding: 12px 15px;
+    }
+    .table3 tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+    .table3 tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+    .table3 tbody tr:last-of-type {
+      border-bottom: 2px solid #8B0000;
+    }
+    .table3 tbody tr.active-row {
+      font-weight: bold;
+      color: #8B0000;
+      text-align: center;
+    }
+    .table3 tbody td.left-align {
+      text-align: left;
+    }
   </style>
   </style>
   </head>
@@ -410,11 +450,53 @@ The detection of audio deepfakes and synthetic media has swiftly emerged as a cr
 
 <br>
 <br>
-<a name="5" href="https://bhashabluff.github.io/"><h2>Results</h2></a>
-<div style="text-align: center; width: 1000px;"> 
+<a name="5" href="https://bhashabluff.github.io/"><h2>LeaderBoard</h2></a>
+<!-- <div style="text-align: center; width: 1000px;"> 
 <img alt="" src="results.png" style="display: inline-block; vertical-align: middle;" />
-</div>
-
+</div> -->
+<table class="table3">
+    <caption>Leaderboard for BhashaBluff Dataset</caption>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Method</th>
+        <th>Accuracy</th>
+        <th>F1-Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>M3</td>
+        <td>0.8772</td>
+        <td>0.9241</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>M1</td>
+        <td>0.8733</td>
+        <td>0.9346</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>M2</td>
+        <td>0.8608</td>
+        <td>0.9324</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>M4</td>
+        <td>0.8590</td>
+        <td>0.9252</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>M5</td>
+        <td>0.8359</td>
+        <td>0.9106</td>
+      </tr>
+    </tbody>
+  </table>
 
 
 </section>
