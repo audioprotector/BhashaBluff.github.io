@@ -53,6 +53,42 @@
       font-weight: bold;
       color: #009879;
     }
+    .table2 {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .table2 caption {
+      margin: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .table2 thead tr {
+      background-color: #4CAF50;
+      color: #ffffff;
+      text-align: left;
+    }
+    .table2 th, .table2 td {
+      padding: 12px 15px;
+    }
+    .table2 tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+    .table2 tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+    .table2 tbody tr:last-of-type {
+      border-bottom: 2px solid #4CAF50;
+    }
+    .table2 tbody tr.active-row {
+      font-weight: bold;
+      color: #4CAF50;
+    }
   </style>
   </head>
   <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
@@ -248,10 +284,109 @@ The detection of audio deepfakes and synthetic media has swiftly emerged as a cr
 <br>
 <br>
 <a name="2" href="https://bhashabluff.github.io/"><h2 id="visualization2">Dataset Statistics</h2></a>
-<div style="text-align: center; width: 600px;"> 
+<!-- <div style="text-align: center; width: 600px;"> 
 <img alt="" src="dataset_stats.png" style="display: inline-block; vertical-align: middle;" />
-</div>
-
+</div> -->
+<table class="table2">
+    <caption>Overall statistics of the proposed BhashaBluff dataset</caption>
+    <thead>
+      <tr>
+        <th></th>
+        <th colspan="4">Train</th>
+        <th colspan="4">Test Seen</th>
+        <th colspan="4">Test Unseen</th>
+      </tr>
+      <tr>
+        <th>Partition</th>
+        <th colspan="2">Hindi</th>
+        <th colspan="2">English</th>
+        <th colspan="2">Hindi</th>
+        <th colspan="2">English</th>
+        <th colspan="2">Hindi</th>
+        <th colspan="2">English</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Real</th>
+        <th>Fake</th>
+        <th>Real</th>
+        <th>Fake</th>
+        <th>Real</th>
+        <th>Fake</th>
+        <th>Real</th>
+        <th>Fake</th>
+        <th>Real</th>
+        <th>Fake</th>
+        <th>Real</th>
+        <th>Fake</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Clean</td>
+        <td>57128</td>
+        <td>95625</td>
+        <td>11626</td>
+        <td>57116</td>
+        <td>46948</td>
+        <td>55099</td>
+        <td>1364</td>
+        <td>26312</td>
+        <td>18708</td>
+        <td>11749</td>
+        <td>38380</td>
+        <td>6440</td>
+      </tr>
+      <tr>
+        <td>Noisy</td>
+        <td>285640</td>
+        <td>478125</td>
+        <td>58130</td>
+        <td>285580</td>
+        <td>234740</td>
+        <td>275495</td>
+        <td>6820</td>
+        <td>131560</td>
+        <td>93540</td>
+        <td>58745</td>
+        <td>191900</td>
+        <td>32200</td>
+      </tr>
+      <tr>
+        <td>Codec</td>
+        <td>57128</td>
+        <td>95625</td>
+        <td>11626</td>
+        <td>57116</td>
+        <td>46948</td>
+        <td>55099</td>
+        <td>1364</td>
+        <td>26312</td>
+        <td>18708</td>
+        <td>11749</td>
+        <td>38380</td>
+        <td>6440</td>
+      </tr>
+      <tr>
+        <td>Neural Compression</td>
+        <td>57128</td>
+        <td>95625</td>
+        <td>11626</td>
+        <td>57116</td>
+        <td>46948</td>
+        <td>55099</td>
+        <td>1364</td>
+        <td>26312</td>
+        <td>18708</td>
+        <td>11749</td>
+        <td>38380</td>
+        <td>6440</td>
+      </tr>
+      <tr class="active-row">
+        <td colspan="13"><strong>Total Dataset Size: 3411960 (3.4 Millions)</strong></td>
+      </tr>
+    </tbody>
+  </table>
 <br>
 <br>
 
