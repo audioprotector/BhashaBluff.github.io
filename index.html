@@ -16,6 +16,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="asset/diffgan-tts/style.css">
+    <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    caption {
+      margin: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+    thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+    }
+    th, td {
+      padding: 12px 15px;
+    }
+    tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+    tbody tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+    tbody tr.active-row {
+      font-weight: bold;
+      color: #009879;
+    }
+  </style>
   </head>
   <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
     <section class="page-header">
@@ -66,7 +104,147 @@ The detection of audio deepfakes and synthetic media has swiftly emerged as a cr
 
 <br>
 <br>
-<table>
+
+ <table>
+    <caption>Statistics of Datasets for Audio Anti-Spoofing Detection</caption>
+    <thead>
+      <tr>
+        <th>Dataset</th>
+        <th>Year</th>
+        <th>Language</th>
+        <th>Spoofed type (TTS | VC | PF)</th>
+        <th>Unseen Attack</th>
+        <th>#Spoofed Methods</th>
+        <th>Condition (Clean | Noisy | Codec)</th>
+        <th># Real Samples</th>
+        <th># Spoofed Samples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ASVspoof 2015</td>
+        <td>2015</td>
+        <td>English</td>
+        <td>✔ | ✔ | ✘</td>
+        <td>✔</td>
+        <td>10</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>16000</td>
+        <td>246500</td>
+      </tr>
+      <tr>
+        <td>ASVspoof 2019-LA</td>
+        <td>2019</td>
+        <td>English</td>
+        <td>✔ | ✔ | ✘</td>
+        <td>✔</td>
+        <td>19</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>10256</td>
+        <td>90192</td>
+      </tr>
+      <tr>
+        <td>FoR -original</td>
+        <td>2019</td>
+        <td>English</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>✘</td>
+        <td>7</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>108256</td>
+        <td>87285</td>
+      </tr>
+      <tr>
+        <td>ASVspoof 2021-LA</td>
+        <td>2021</td>
+        <td>English</td>
+        <td>✔ | ✔ | ✘</td>
+        <td>✔</td>
+        <td>19</td>
+        <td>✘ | ✘ | ✔</td>
+        <td>14816</td>
+        <td>133360</td>
+      </tr>
+      <tr>
+        <td>ASVspoof 2021-DF</td>
+        <td>2021</td>
+        <td>English</td>
+        <td>✔ | ✔ | ✘</td>
+        <td>✔</td>
+        <td>100+</td>
+        <td>✘ | ✘ | ✔</td>
+        <td>14869</td>
+        <td>519059</td>
+      </tr>
+      <tr>
+        <td>WaveFake</td>
+        <td>2021</td>
+        <td>English, Japanese</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>✘</td>
+        <td>7</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>0</td>
+        <td>117985</td>
+      </tr>
+      <tr>
+        <td>TIMIT -TTS</td>
+        <td>2022</td>
+        <td>English</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>✘</td>
+        <td>12</td>
+        <td>✘ | ✔ | ✔</td>
+        <td>0</td>
+        <td>5160</td>
+      </tr>
+      <tr>
+        <td>ADD2022 -LF</td>
+        <td>2022</td>
+        <td>Chinese</td>
+        <td>✔ | ✔ | ✘</td>
+        <td>✔</td>
+        <td>Unknown</td>
+        <td>✘ | ✔ | ✘</td>
+        <td>36953</td>
+        <td>123932</td>
+      </tr>
+      <tr>
+        <td>Latin American</td>
+        <td>2022</td>
+        <td>Spanish</td>
+        <td>✔ | ✔ | ✘</td>
+        <td>✘</td>
+        <td>6</td>
+        <td>✔ | ✘ | ✘</td>
+        <td>22816</td>
+        <td>758000</td>
+      </tr>
+      <tr>
+        <td>CFAD</td>
+        <td>2023</td>
+        <td>Chinese</td>
+        <td>✔ | ✔ | ✘</td>
+        <td>✔</td>
+        <td>12</td>
+        <td>✔ | ✔ | ✔</td>
+        <td>38600</td>
+        <td>77200</td>
+      </tr>
+      <tr class="active-row">
+        <td><strong>BhashaBluff (Ours)</strong></td>
+        <td><strong>2024</strong></td>
+        <td><strong>English, Hindi</strong></td>
+        <td><strong>✔ | ✔ | ✔</strong></td>
+        <td><strong>✔</strong></td>
+        <td><strong>15</strong></td>
+        <td><strong>✔ | ✔ | ✔</strong></td>
+        <td><strong>1.39M</strong></td>
+        <td><strong>2.01M</strong></td>
+      </tr>
+    </tbody>
+  </table>
+<!-- <table>
   <thead>
     <tr>
       <th>Dataset</th>
@@ -203,7 +381,7 @@ The detection of audio deepfakes and synthetic media has swiftly emerged as a cr
       <td><strong>2.01M</strong></td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
 <br>
 <br>
