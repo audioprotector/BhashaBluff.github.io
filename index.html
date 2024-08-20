@@ -141,8 +141,16 @@
         opacity: 0;
       }
     }
+  .highlight {
+            color: red;
+            font-style: italic;
+        }
+    .emphasis {
+            color: blue;
+            font-weight: bold;
+        }
   </style>
-  </style>
+ 
   </head>
   <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
     <section class="page-header">
@@ -160,10 +168,23 @@
 
 
 <h2 id="abstract">Abstract</h2>
-<p>
+        <p>The detection of <span class="highlight">audio deepfakes and synthetic media</span> has swiftly emerged as a critical research area, especially with the growing diversity of audio content. While most existing research focuses on detecting such media in clean, single-language recordings with minimal codec variations, the rise of social media has introduced a more complex and challenging landscape. This landscape now includes <span class="highlight">deepfakes and synthetic media spanning multiple languages, noisy environments, various transcoding methods, and neural compressions</span>.</p>
+
+    <p>To address these real-world challenges, the <span class="highlight">BhashaBluff dataset</span> provides a comprehensive resource for evaluating deepfake and synthetic media detection across multilingual, noisy, and compressed audio contexts. The BhashaBluff dataset features:
+        <ul>
+            <li><span class="highlight">Deepfake and synthetic audios in both clean and code-mixed content</span>, specifically in Hindi and English.</li>
+            <li><span class="highlight">Deepfake and synthetic audios created under noisy conditions</span> using four different environmental sound datasets.</li>
+            <li><span class="highlight">Transcodec and neural compressed audio samples</span> that simulate the effects of social media sharing.</li>
+        </ul>
+    </p>
+
+    <p>With over <span class="highlight">500 GB of data and 3.4 million audio files</span> distributed across three partitions, this dataset represents the largest collection to date with such extensive variability. Benchmark results from various evaluation setups using both popular and state-of-the-art deepfake and synthetic media detection models showcase a significant decline in performance when dealing with audio in noisy, compressed, and multilingual settings. Additionally, current detection techniques are less effective against unfamiliar languages and attack types, highlighting the need for more robust and adaptive algorithms.</p>
+
+    <p>The BhashaBluff dataset is positioned to advance the field by offering the benchmark necessary to address the complexities of multilingual, noisy, and compressed audio deepfakes and synthetic media, ultimately enhancing detection capabilities in real-world scenarios.</p>
+<!-- <p>
 The detection of audio deepfakes and synthetic media has swiftly emerged as a critical research area, especially with the growing diversity of audio content. While most existing research focuses on detecting such media in clean, single-language recordings with minimal codec variations, the rise of social media has introduced a more complex and challenging landscape. This landscape now includes deepfakes and synthetic media spanning multiple languages, noisy environments, various transcoding methods, and neural compressions. To address these real-world challenges, the BhashaBluff dataset provides a comprehensive resource for evaluating deepfake and synthetic media detection across multilingual, noisy, and compressed audio contexts. The BhashaBluff dataset features (i) deepfake and synthetic audios in both clean and code-mixed content, specifically in Hindi and English; (ii) deepfake and synthetic audios created under noisy conditions using four different environmental sound datasets; and (iii) transcodec and neural compressed audio samples that simulate the effects of social media sharing. With over 500 GB of data and 3.4 million audio files distributed across three partitions, this dataset represents the largest collection to date with such extensive variability. Benchmark results from various evaluation setups using both popular and state-of-the-art deepfake and synthetic media detection models showcase a significant decline in performance when dealing with audio in noisy, compressed, and multilingual settings. Additionally, current detection techniques are less effective against unfamiliar languages and attack types, highlighting the need for more robust and adaptive algorithms. The BhashaBluff dataset is positioned to advance the field by offering the benchmark necessary to address the complexities of multilingual, noisy, and compressed audio deepfakes and synthetic media, ultimately enhancing detection capabilities in real-world scenarios.
 
-</p>
+</p> -->
 <h2><p class="toc_title">Contents</p></h2>
 <div id="toc_container">
 <ul>
