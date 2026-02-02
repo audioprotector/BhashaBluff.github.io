@@ -173,314 +173,38 @@
 <h2><p class="toc_title">Contents</p></h2>
 <div id="toc_container">
 <ul>
+    <li><a href="https://bhashabluff.github.io/#0">Research Questions</a></li>
   <li><a href="https://bhashabluff.github.io/#0">BhashaBluff Dataset Design</a></li>
   <li><a href="https://bhashabluff.github.io/#1">Comparison With Existing Dataset</a></li>
   <li><a href="https://bhashabluff.github.io/#2">Dataset Statistics</a></li>
   <li><a href="https://bhashabluff.github.io/#3">Sample Dataset</a></li>
-  <li><a href="https://bhashabluff.github.io/#4">Baselining Codes</a></li>
-  <li><a href="https://bhashabluff.github.io/#5">Results</a></li>
 <!--     <li><a href="https://bhashabluff.github.io/#6">Results</a></li> -->
 </ul>
+
+</div>
+<a name="0" href="https://bhashabluff.github.io/"><h2 id="overview">Research Questions</h2></a>
+<div style="text-align: center; width: 1000px;"> 
+<img alt="" src="RQ.png" style="display: inline-block; vertical-align: middle;" />
+</div>
 </div>
 <a name="0" href="https://bhashabluff.github.io/"><h2 id="overview">Dataset Design</h2></a>
 <div style="text-align: center; width: 1000px;"> 
-<img alt="" src="dataset_design.png" style="display: inline-block; vertical-align: middle;" />
+<img alt="" src="design_method.png" style="display: inline-block; vertical-align: middle;" />
 </div>
 <a name="1" href="https://bhashabluff.github.io/"><h2 id="visualization1">Comparison With Existing Dataset</h2></a>
- <table>
-    <caption>Statistics of Datasets for Audio Anti-Spoofing Detection</caption>
-    <thead>
-      <tr>
-        <th>Dataset</th>
-        <th>Year</th>
-        <th>Language</th>
-        <th>Spoofed type (TTS | VC | PF)</th>
-        <th>Unseen Attack</th>
-        <th>#Spoofed Methods</th>
-        <th>Condition (Clean | Noisy | Codec)</th>
-        <th># Real Samples</th>
-        <th># Spoofed Samples</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>ASVspoof 2015</td>
-        <td>2015</td>
-        <td>English</td>
-        <td>✔ | ✔ | ✘</td>
-        <td>✔</td>
-        <td>10</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>16000</td>
-        <td>246500</td>
-      </tr>
-      <tr>
-        <td>ASVspoof 2019-LA</td>
-        <td>2019</td>
-        <td>English</td>
-        <td>✔ | ✔ | ✘</td>
-        <td>✔</td>
-        <td>19</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>10256</td>
-        <td>90192</td>
-      </tr>
-      <tr>
-        <td>FoR -original</td>
-        <td>2019</td>
-        <td>English</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>✘</td>
-        <td>7</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>108256</td>
-        <td>87285</td>
-      </tr>
-      <tr>
-        <td>ASVspoof 2021-LA</td>
-        <td>2021</td>
-        <td>English</td>
-        <td>✔ | ✔ | ✘</td>
-        <td>✔</td>
-        <td>19</td>
-        <td>✘ | ✘ | ✔</td>
-        <td>14816</td>
-        <td>133360</td>
-      </tr>
-      <tr>
-        <td>ASVspoof 2021-DF</td>
-        <td>2021</td>
-        <td>English</td>
-        <td>✔ | ✔ | ✘</td>
-        <td>✔</td>
-        <td>100+</td>
-        <td>✘ | ✘ | ✔</td>
-        <td>14869</td>
-        <td>519059</td>
-      </tr>
-      <tr>
-        <td>WaveFake</td>
-        <td>2021</td>
-        <td>English, Japanese</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>✘</td>
-        <td>7</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>0</td>
-        <td>117985</td>
-      </tr>
-      <tr>
-        <td>TIMIT -TTS</td>
-        <td>2022</td>
-        <td>English</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>✘</td>
-        <td>12</td>
-        <td>✘ | ✔ | ✔</td>
-        <td>0</td>
-        <td>5160</td>
-      </tr>
-      <tr>
-        <td>ADD2022 -LF</td>
-        <td>2022</td>
-        <td>Chinese</td>
-        <td>✔ | ✔ | ✘</td>
-        <td>✔</td>
-        <td>Unknown</td>
-        <td>✘ | ✔ | ✘</td>
-        <td>36953</td>
-        <td>123932</td>
-      </tr>
-      <tr>
-        <td>Latin American</td>
-        <td>2022</td>
-        <td>Spanish</td>
-        <td>✔ | ✔ | ✘</td>
-        <td>✘</td>
-        <td>6</td>
-        <td>✔ | ✘ | ✘</td>
-        <td>22816</td>
-        <td>758000</td>
-      </tr>
-      <tr>
-        <td>CFAD</td>
-        <td>2023</td>
-        <td>Chinese</td>
-        <td>✔ | ✔ | ✘</td>
-        <td>✔</td>
-        <td>12</td>
-        <td>✔ | ✔ | ✔</td>
-        <td>38600</td>
-        <td>77200</td>
-      </tr>
-      <tr class="active-row">
-        <td><strong>BhashaBluff (Ours)</strong></td>
-        <td><strong>2024</strong></td>
-        <td><strong>English, Hindi</strong></td>
-        <td><strong>✔ | ✔ | ✔</strong></td>
-        <td><strong>✔</strong></td>
-        <td><strong>15</strong></td>
-        <td><strong>✔ | ✔ | ✔</strong></td>
-        <td><strong>1.39M</strong></td>
-        <td><strong>2.01M</strong></td>
-      </tr>
-    </tbody>
-  </table>
+<div style="text-align: center; width: 1000px;"> 
+<img alt="" src="dataset_comp.png" style="display: inline-block; vertical-align: middle;" />
+</div>
+ 
 <a name="2" href="https://bhashabluff.github.io/"><h2 id="visualization2">Dataset Statistics</h2></a>
 <!-- <div style="text-align: center; width: 600px;"> 
-<img alt="" src="dataset_stats.png" style="display: inline-block; vertical-align: middle;" />
-</div> -->
-<table class="table2">
-    <caption>Overall statistics of the proposed BhashaBluff dataset</caption>
-    <thead>
-      <tr>
-        <th></th>
-        <th colspan="4">Train</th>
-        <th colspan="4">Test Seen</th>
-        <th colspan="4">Test Unseen</th>
-      </tr>
-      <tr>
-        <th>Partition</th>
-        <th colspan="2">Hindi</th>
-        <th colspan="2">English</th>
-        <th colspan="2">Hindi</th>
-        <th colspan="2">English</th>
-        <th colspan="2">Hindi</th>
-        <th colspan="2">English</th>
-      </tr>
-      <tr>
-        <th></th>
-        <th>Real</th>
-        <th>Fake</th>
-        <th>Real</th>
-        <th>Fake</th>
-        <th>Real</th>
-        <th>Fake</th>
-        <th>Real</th>
-        <th>Fake</th>
-        <th>Real</th>
-        <th>Fake</th>
-        <th>Real</th>
-        <th>Fake</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Clean</td>
-        <td>57128</td>
-        <td>95625</td>
-        <td>11626</td>
-        <td>57116</td>
-        <td>46948</td>
-        <td>55099</td>
-        <td>1364</td>
-        <td>26312</td>
-        <td>18708</td>
-        <td>11749</td>
-        <td>38380</td>
-        <td>6440</td>
-      </tr>
-      <tr>
-        <td>Noisy</td>
-        <td>285640</td>
-        <td>478125</td>
-        <td>58130</td>
-        <td>285580</td>
-        <td>234740</td>
-        <td>275495</td>
-        <td>6820</td>
-        <td>131560</td>
-        <td>93540</td>
-        <td>58745</td>
-        <td>191900</td>
-        <td>32200</td>
-      </tr>
-      <tr>
-        <td>Codec </td>
-        <td>57128</td>
-        <td>95625</td>
-        <td>11626</td>
-        <td>57116</td>
-        <td>46948</td>
-        <td>55099</td>
-        <td>1364</td>
-        <td>26312</td>
-        <td>18708</td>
-        <td>11749</td>
-        <td>38380</td>
-        <td>6440</td>
-      </tr>
-      <tr>
-        <td>Neural Compression</td>
-        <td>57128</td>
-        <td>95625</td>
-        <td>11626</td>
-        <td>57116</td>
-        <td>46948</td>
-        <td>55099</td>
-        <td>1364</td>
-        <td>26312</td>
-        <td>18708</td>
-        <td>11749</td>
-        <td>38380</td>
-        <td>6440</td>
-      </tr>
-      <tr class="active-row">
-        <td colspan="13"><strong>Total Dataset Size: 3411960 (3.4 Millions)</strong></td>
-      </tr>
-    </tbody>
-  </table>
+<img alt="" src="datset_stats.png" style="display: inline-block; vertical-align: middle;" />
+</div>
+
 <a name="3" href="https://bhashabluff.github.io/"><h2>Sample Dataset</h2></a>
 
 <p> The subset of the dataset is available on this <a href="https://drive.google.com/drive/folders/19tGkFyGUCfXS2F3fZ7QYy_n1jyF-Qa0C?usp=sharing">link</a>. We have randomly created a subset of approximately 5000 audio samples across all partitions.</p>
-<a name="4" href="https://bhashabluff.github.io/"><h2>Baselining Codes</h2></a>
-<p> The BhasaBluff baselining code is available at this <a href ="https://anonymous.4open.science/r/BhashaBluf_Baselines-8D1F/">link</a>. Please clone the repo and download the dataset for training the baseline models. </p>
-<a name="5" href="https://bhashabluff.github.io/"><h2>LeaderBoard</h2></a>
-<p>We will be inviting submissions for the BhashaBluff dataset after the acceptance of the paper</p>
-<!--   <p><strong class="blink">(New)</strong></p><p>We will be inviting submissions for the BhashaBluff dataset after the acceptance of the paper</p> -->
-<table class="table3">
-    <caption>Leaderboard for BhashaBluff Dataset</caption>
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Method</th>
-        <th>Accuracy</th>
-        <th>F1-Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>M3</td>
-        <td>0.8772</td>
-        <td>0.9241</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>M1</td>
-        <td>0.8733</td>
-        <td>0.9346</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>M2</td>
-        <td>0.8608</td>
-        <td>0.9324</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>M4</td>
-        <td>0.8590</td>
-        <td>0.9252</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>M5</td>
-        <td>0.8359</td>
-        <td>0.9106</td>
-      </tr>
-    </tbody>
-  </table>
+
 
 </section>
 </body></html>
